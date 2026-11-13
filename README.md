@@ -10,8 +10,7 @@ changes in vocabulary worth investigating through close reading.
 The research corpus contains selected historical newspaper records with
 source references to the Library of Congress. Archive coverage, search
 criteria, OCR quality, and repeated text can affect which material appears
-in the corpus. The research corpus and paper results are private. The example
-CSV contains fictional text and metadata created to demonstrate the workflow.
+in the corpus. The example CSV contains fictional text and metadata created to demonstrate the workflow.
 
 - `audit_corpus.py` summarizes coverage by decade and by state and reports
   repeated cleaned text, identifiers, and source blocks when available.
@@ -20,6 +19,18 @@ CSV contains fictional text and metadata created to demonstrate the workflow.
 - `term_trends.py` counts selected words and reports occurrences per 1,000
   tokens in each decade. Numerators and denominators use the same
   tokenizer. The output includes counts and a chart.
+
+## Download the exploratory corpus
+
+[Download the corpus as a ZIP file](https://github.com/lucianamaselli/historical-newspapers-text-as-data/releases/download/data-v1/all_art_1840_1923.csv.zip) from the [data-v1 release](https://github.com/lucianamaselli/historical-newspapers-text-as-data/releases/tag/data-v1). This release accompanies the initial exploration of a paper in progress.
+
+After installing the requirements below, extract the CSV and run the scripts with its path:
+
+```bash
+unzip all_art_1840_1923.csv.zip
+python audit_corpus.py all_art_1840_1923.csv
+python term_trends.py all_art_1840_1923.csv --output-dir output
+```
 
 ## Run the example
 
